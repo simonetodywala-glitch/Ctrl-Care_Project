@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Ctrl+Care | Get in Touch</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-circle">ctrl</div>
+        <span class="nav-brand">Ctrl+Care</span>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="resources.html">Resources</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://instagram.com/ctrlcare_project" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-follow-btn">Follow us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);">
+    <div class="container">
+      <span class="hero-tag fade-in">Get in Touch</span>
+      <h1 class="hero-title fade-in">Contact Us</h1>
+      <p class="hero-subtext fade-in">We'd love to hear from you! Have questions, suggestions, or want to collaborate? Send us a message and we'll get back to you as soon as we can.</p>
+    </div>
+  </section>
+
+  <!-- Contact Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>How to Reach Us</h2>
+        <p>Choose your preferred way to get in touch with Ctrl+Care</p>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>✉️ Email</h4>
+          <p style="font-size: 1.25rem;">ctrlcareproject@gmail.com</p>
+          <p style="font-size: 0.85rem; color: #8a8a8a;">We typically respond within 24 hours</p>
+        </div>
+        <div class="info-card">
+          <h4>📸 Instagram</h4>
+          <p style="font-size: 1.25rem;">@ctrlcare_project</p>
+          <a href="https://instagram.com/ctrlcare_project" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Follow on Instagram</a>
+        </div>
+        <div class="info-card">
+          <h4>💬 Newsletter</h4>
+          <p style="font-size: 1.25rem;">Coming Soon!</p>
+          <p style="font-size: 0.85rem; color: #8a8a8a;">We're working on this feature - stay tuned for updates on new resources and tips</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="section" style="background-color: var(--bg-light);">
+    <div class="container">
+      <div class="featured-card" style="background: linear-gradient(135deg, var(--primary) 0%, #f5e0e0 100%);">
+        <h2 style="margin-bottom: 1.5rem;">Send Us a Message</h2>
+        <p style="font-size: 1.125rem; margin-bottom: 2rem;">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form class="magic-card" style="padding: 2rem;">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name" class="form-label">Your name *</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email address *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject" class="form-label">Subject</label>
+            <select id="subject" name="subject" class="form-input">
+              <option value="">Select a subject...</option>
+              <option value="general">General Inquiry</option>
+              <option value="collaboration">Collaboration Opportunity</option>
+              <option value="suggestion">Resource Suggestion</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Your message *</label>
+            <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="How can we help you?" required></textarea>
+          </div>
+
+          <div class="form-checkbox">
+            <input type="checkbox" id="newsletter" name="newsletter" checked>
+            <label for="newsletter">Subscribe to our newsletter for updates on new resources</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-large" style="margin-top: 1.5rem; width: 100%;">Send message</button>
+
+          <p style="font-size: 0.875rem; color: #8a8a8a; margin-top: 1.5rem; text-align: center;">
+            By submitting this form, you agree to our privacy policy. We respect your privacy and will never share your information.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions about Ctrl+Care</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Is Ctrl+Care really free?
+          </button>
+          <div class="faq-answer" style="display: none;">
+            <p>Yes! Everything on Ctrl+Care is completely free. We believe that AI literacy should be accessible to everyone, regardless of their background or financial situation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Who is Ctrl+Care for?
+          </button>
+          <div class="faq-answer" style="display: none;">
+            <p>Ctrl+Care is for everyone! We have resources for kids, teens, adults, seniors, educators, and anyone interested in learning about AI — no matter their technical background or learning style.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            How do I suggest a new topic?
+          </button>
+          <div class="faq-answer" style="display: none;">
+            <p>Fill out our contact form and select "Resource Suggestion" as the subject. We review all suggestions and prioritize topics that our community tells us would be most helpful.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Are your resources accessible?
+          </button>
+          <div class="faq-answer" style="display: none;">
+            <p>Yes! Accessibility is at the core of everything we do. Our resources are designed to be usable by people with a wide range of abilities, and we're always working to improve accessibility further.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Can schools use your materials?
+          </button>
+          <div class="faq-answer" style="display: none;">
+            <p>Absolutely! Our educational resources are free for schools, non-profits, and educational organizations. Just reach out if you'd like to collaborate on an educational project.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Strip -->
+  <div class="cta-strip">
+    <div class="container">
+      <h3>Still have questions?</h3>
+      <p style="margin-bottom: 1rem;">Our team is happy to answer your questions directly</p>
+      <a href="mailto:hello@ctrlcare.org" class="btn btn-primary">Email us directly</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">Ctrl+Care</div>
+      <p class="footer-tagline">Making AI make sense — for everyone.</p>
+      <p class="footer-copyright">© 2026 Ctrl+Care. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ toggle
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isExpanded = item.getAttribute('aria-expanded') === 'true';
+        faqButtons.forEach(btn => {
+          btn.parentElement.setAttribute('aria-expanded', 'false');
+        });
+        if (!isExpanded) {
+          item.setAttribute('aria-expanded', 'true');
+          const answer = item.querySelector('.faq-answer');
+          if (answer) {
+            answer.style.display = 'block';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>

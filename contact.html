@@ -195,15 +195,19 @@
       button.addEventListener('click', () => {
         const item = button.parentElement;
         const isExpanded = item.getAttribute('aria-expanded') === 'true';
+
+        // Close all items  ✅ NEW — was missing the answer hide
         faqButtons.forEach(btn => {
           btn.parentElement.setAttribute('aria-expanded', 'false');
+          const ans = btn.parentElement.querySelector('.faq-answer'); // ✅ ADDED
+          if (ans) ans.style.display = 'none';                        // ✅ ADDED
         });
+
+        // If it wasn't already open, open it  ✅ comment updated
         if (!isExpanded) {
           item.setAttribute('aria-expanded', 'true');
           const answer = item.querySelector('.faq-answer');
-          if (answer) {
-            answer.style.display = 'block';
-          }
+          if (answer) answer.style.display = 'block';
         }
       });
     });

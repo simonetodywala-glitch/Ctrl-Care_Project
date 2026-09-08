@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ctrl+Care — shared interactions
+   Ctrl+Care shared interactions
    Nav drawer, sticky nav shadow, scroll reveals, FAQ accordion, filters.
    ========================================================================== */
 (function () {
@@ -147,7 +147,7 @@
       form.reset();
       if (note) {
         note.textContent =
-          'Thanks! Our newsletter is still being set up — follow us on Instagram for updates in the meantime.';
+          'Thanks! Our newsletter is still being set up, so follow us on Instagram for updates in the meantime.';
         note.removeAttribute('hidden');
       }
     });

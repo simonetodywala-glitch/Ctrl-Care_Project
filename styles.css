@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Ctrl+Care — Design System
+   Ctrl+Care Design System
    Warm, friendly, professional. Blush-rose brand with layered depth,
    micro-interactions and accessible contrast.
    ========================================================================== */
@@ -10,7 +10,7 @@
    1. Tokens
    -------------------------------------------------------------------------- */
 :root {
-  /* Ink / neutrals — warm-tinted so they sit with the rose */
+  /* Ink / neutrals: warm-tinted so they sit with the rose */
   --ink-900: #1a1218;
   --ink-800: #2a1f27;
   --ink-700: #3f313a;
@@ -19,18 +19,18 @@
   --ink-400: #8c7d88;
   --ink-300: #b6a9b2;
 
-  /* Rose — brand scale */
+  /* Rose brand scale */
   --rose-50:  #fff6f7;
   --rose-100: #ffe9ec;
   --rose-200: #fcd5dc;
   --rose-300: #f6b3c0;
   --rose-400: #ec8b9f;
   --rose-500: #db6180;
-  --rose-600: #be3a5e;  /* accessible on white — use for text/links */
+  --rose-600: #be3a5e;  /* accessible on white, use for text/links */
   --rose-700: #9a2b49;
   --rose-800: #772037;
 
-  /* Supporting accents — give each resource pathway its own identity */
+  /* Supporting accents: give each resource pathway its own identity */
   --plum-100: #f1ebf7;
   --plum-500: #7c5aa0;
   --plum-600: #63488a;
@@ -722,7 +722,7 @@ strong { font-weight: 700; color: var(--ink-800); }
 .hero-proof-item { display: inline-flex; align-items: center; gap: .4rem; }
 .hero-proof-item svg { width: 17px; height: 17px; color: var(--rose-500); flex-shrink: 0; }
 
-/* Hero visual — stacked floating cards */
+/* Hero visual: stacked floating cards */
 .hero-visual {
   position: relative;
   min-height: 400px;
@@ -929,7 +929,7 @@ a.card:hover { color: inherit; }
 a.card .link-arrow svg { transition: transform var(--t) var(--ease); }
 a.card:hover .link-arrow svg { transform: translateX(5px); }
 
-/* Pathway card — the three big resource routes */
+/* Pathway card: the three big resource routes */
 .pathway {
   position: relative;
   display: flex;
@@ -1306,7 +1306,7 @@ a.card:hover .link-arrow svg { transform: translateX(5px); }
   border-top: 1px solid var(--border);
 }
 
-/* Course card — external provider */
+/* Course card: external provider */
 .provider {
   display: flex;
   align-items: center;
@@ -1331,7 +1331,7 @@ a.card:hover .link-arrow svg { transform: translateX(5px); }
 .provider-mark.teal { background: var(--teal-100); color: var(--teal-600); }
 .provider-mark.amber { background: var(--amber-100); color: var(--amber-600); }
 
-/* Featured post — wide hero card */
+/* Featured post: wide hero card */
 .feature-post {
   display: grid;
   grid-template-columns: 1.05fr .95fr;

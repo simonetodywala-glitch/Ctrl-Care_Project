@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Does AI Make Things Up? | Ctrl+Care Blog</title>
+  <meta name="description" content="A plain-English guide to AI hallucinations: what they are, why they happen, and two real cases (a lawyer and an airline) that learned the hard way.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ Navigation ============================ -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">ctrl</span>
+        <span class="nav-brand">Ctrl+Care</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+
+        <div class="nav-item">
+          <a class="nav-link" href="resources.html">
+            Resources
+            <svg class="nav-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a class="nav-drop-item" href="resources-guides.html">
+              <span class="nav-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Guides &amp; Explainers</span>
+                <span class="nav-drop-desc">Written walkthroughs of AI concepts, in plain English</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-videos.html">
+              <span class="nav-drop-icon plum">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Video Library</span>
+                <span class="nav-drop-desc">Short videos we make, explaining one idea at a time</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-courses.html">
+              <span class="nav-drop-icon teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Free Courses</span>
+                <span class="nav-drop-desc">The best no-cost courses and channels, curated</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow us</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-link" href="index.html">Home</a>
+    <a class="mobile-link" href="about.html">About</a>
+    <a class="mobile-link" href="resources.html">Resources</a>
+    <a class="mobile-sub" href="resources-guides.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Guides &amp; Explainers
+    </a>
+    <a class="mobile-sub" href="resources-videos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Video Library
+    </a>
+    <a class="mobile-sub" href="resources-courses.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Free Courses
+    </a>
+    <a class="mobile-link" href="blog.html" aria-current="page">Blog</a>
+    <a class="mobile-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow @ctrlcare_project</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== Article hero ============================== -->
+    <section class="hero hero-page article-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <a href="blog.html">Blog</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span aria-current="page">AI hallucinations</span>
+        </nav>
+
+        <span class="pill">AI basics</span>
+
+        <h1 class="hero-title" style="margin-top: .75rem;">Why does AI make things up?</h1>
+        <p class="hero-sub lede">
+          A plain-English guide to hallucinations: what they are, why even the best AI tools
+          do this, and two real stories of people who trusted the answer a little too much.
+        </p>
+
+        <div class="article-meta-row">
+          <span class="meta-text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 min read
+          </span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="meta-text">Ctrl+Care Team</span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="meta-text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+            Updated September 2026
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== Article body ============================== -->
+    <section class="section section-tight">
+      <div class="container">
+        <div class="article-shell">
+
+          <article class="prose" data-reveal>
+
+            <p>
+              In 2023, a lawyer in New York asked ChatGPT to help research a case. It came back
+              with six court decisions that supported his argument, complete with names, dates,
+              and quotes. He used them in an official court filing. There was just one problem:
+              none of those cases existed. ChatGPT had made every single one up, and when the
+              lawyer asked it to double check, it confidently assured him they were real.
+            </p>
+            <p>
+              The judge was not amused. Both attorneys were fined, and the story became one of
+              the most famous cautionary tales in AI. But here's the part that matters most for
+              the rest of us: the lawyer wasn't careless or unusually gullible. He ran into
+              something every single AI chatbot does, called a hallucination, and most people
+              have no idea it's even possible until it happens to them.
+            </p>
+
+            <h2 id="what-is-it">So what is a hallucination, exactly?</h2>
+            <p>
+              An AI hallucination is when a chatbot states something false as if it were fact,
+              with zero hesitation and often with impressive-looking detail attached. It's not
+              lying, because lying requires knowing the truth and choosing to hide it. AI doesn't
+              know what's true. It's something stranger: a system that is very good at sounding
+              right, generating an answer that fits the shape of a good answer, whether or not
+              the content behind it is real.
+            </p>
+            <p>
+              That's what makes hallucinations so easy to miss. A wrong answer that sounds
+              unsure is easy to catch. A wrong answer delivered with total confidence, in
+              full sentences, with a citation attached, is not.
+            </p>
+
+            <h2 id="why-it-happens">Why AI does this in the first place</h2>
+            <p>
+              Tools like ChatGPT, Claude, and Gemini don't have a database of facts they check
+              against. Underneath, they're predicting the next most likely word based on
+              patterns learned from enormous amounts of text. Most of the time that produces
+              something accurate, because accurate information tends to be common in what the
+              model learned from. But when a model doesn't actually know something, the
+              underlying mechanism doesn't stop and say so. It keeps predicting the next likely
+              word anyway, and the result reads exactly as smoothly as a true answer would.
+            </p>
+            <p>
+              It gets worse for very specific requests. A general question about a topic pulls
+              from a wide, well-covered pattern. A request for a specific court case, a specific
+              statistic, or a specific citation asks the model to be exact about something
+              narrow, and narrow is exactly where these systems are most likely to fill in a
+              gap with something plausible-sounding instead of admitting they don't know.
+            </p>
+            <p>
+              There's a training reason this gets worse, not better, without deliberate effort.
+              Many AI models are fine-tuned using human feedback, where people rate its answers.
+              A confident, complete-sounding answer usually rates better than one that says
+              <em>"I'm not sure."</em> Over time, that nudges the model toward sounding certain,
+              even in moments when certainty isn't earned.
+            </p>
+
+            <div class="pull-quote">
+              <p>The chatbot isn't trying to deceive you. It's built to sound helpful, and
+              sounding helpful and being correct aren't automatically the same thing.</p>
+            </div>
+
+            <h2 id="not-just-lawyers">It's not just lawyers</h2>
+            <p>
+              The court case above is the most famous example, but it's far from the only one.
+              In February 2024, an airline customer named Jake Moffatt asked Air Canada's
+              website chatbot about bereavement fares after his grandmother passed away. The
+              chatbot told him he could book a full-price ticket and apply for a retroactive
+              discount within 90 days. He did exactly that, and Air Canada refused the refund,
+              because that policy did not exist. The chatbot had invented it.
+            </p>
+            <p>
+              Air Canada tried arguing in the tribunal that the chatbot was responsible for its
+              own words, not the company. The tribunal disagreed and ordered Air Canada to pay
+              damages, establishing a precedent that still gets cited today: if your AI tells a
+              customer something false, the company is on the hook for it, not the bot.
+            </p>
+            <p>
+              Both stories share the same root cause. A tool that sounds authoritative got
+              trusted the way you'd trust a search engine or a reference book, when what it
+              actually needed was a second check.
+            </p>
+
+            <h2 id="how-to-spot">How to spot one before it costs you</h2>
+            <p>
+              You don't need to distrust every answer an AI gives you, but a few habits go a
+              long way, especially for anything with real consequences:
+            </p>
+            <ul>
+              <li><strong>Treat specifics as unverified until you check them.</strong> Names, dates, statistics, quotes, and citations are exactly where hallucinations like to hide.</li>
+              <li><strong>Ask "how do you know that?"</strong> A model that can point to a real, checkable source is on firmer ground than one that just restates its answer more confidently.</li>
+              <li><strong>Be extra careful with anything narrow or recent.</strong> The more specific or obscure the request, the more room there is for the model to guess.</li>
+              <li><strong>Search it yourself for anything that matters.</strong> If a decision involves money, health, legal standing, or a grade, a two-minute independent check is worth it every time.</li>
+              <li><strong>Notice confidence isn't evidence.</strong> A calm, detailed tone feels trustworthy, but tone is not the same thing as accuracy.</li>
+            </ul>
+
+            <div class="callout">
+              <div class="callout-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
+                Worth remembering
+              </div>
+              <p>
+                Hallucinations aren't a bug that will just quietly disappear as models improve.
+                They come from how these systems fundamentally work, predicting likely text
+                rather than looking facts up. Newer models hallucinate less often, but "less
+                often" still means it will happen to you eventually.
+              </p>
+            </div>
+
+            <h2 id="takeaway">The takeaway</h2>
+            <p>
+              None of this means AI tools aren't useful. Both the lawyer and the airline
+              chatbot could have avoided real damage with one extra step: checking the specific,
+              checkable facts before acting on them. That's really the whole skill. Use AI to
+              draft, brainstorm, and explain, and treat anything specific and consequential as a
+              claim to verify, not a fact to repeat.
+            </p>
+            <p>
+              That's the kind of thing we mean when we say AI literacy. Not fear of the tools,
+              and not blind trust in them either. Just understanding well enough to use them
+              with your eyes open.
+            </p>
+
+            <div class="author-card">
+              <div class="author-avatar">C</div>
+              <div>
+                <h4>Written by the Ctrl+Care Team</h4>
+                <p>Making AI make sense, for everyone. Follow along on Instagram for more.</p>
+              </div>
+            </div>
+
+            <div class="share-row">
+              <span class="meta-text">Found this useful?</span>
+              <a class="btn btn-outline btn-sm" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Share it on Instagram</a>
+              <a class="btn btn-outline btn-sm" href="contact.html">Ask us a follow-up</a>
+            </div>
+          </article>
+
+          <aside class="article-sidebar" data-reveal>
+            <div class="toc-card">
+              <div class="toc-title">On this page</div>
+              <ol>
+                <li><a href="#what-is-it">So what is a hallucination?</a></li>
+                <li><a href="#why-it-happens">Why AI does this</a></li>
+                <li><a href="#not-just-lawyers">It's not just lawyers</a></li>
+                <li><a href="#how-to-spot">How to spot one</a></li>
+                <li><a href="#takeaway">The takeaway</a></li>
+              </ol>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section class="cta">
+      <div class="container">
+        <h2>Want us to write about something specific?</h2>
+        <p>
+          Tell us what you're confused about. We genuinely choose topics based on what people
+          ask us.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="contact.html">
+            Suggest a topic
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="blog.html">Back to the blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <span class="nav-logo-mark">ctrl</span>
+            <span class="footer-brand">Ctrl+Care</span>
+          </div>
+          <p class="footer-about">
+            A student-run non-profit making AI literacy free and accessible for every
+            age, every ability, every background.
+          </p>
+          <div class="social-row">
+            <a class="social" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer" aria-label="Ctrl+Care on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a class="social" href="mailto:ctrlcareproject@gmail.com" aria-label="Email Ctrl+Care">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-list">
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="resources-guides.html">Guides &amp; explainers</a></li>
+            <li><a href="resources-videos.html">Video library</a></li>
+            <li><a href="resources-courses.html">Free courses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ctrl+Care</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:ctrlcareproject@gmail.com">Email us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ctrl+Care. All rights reserved.</span>
+        <span>Made by two high schoolers who think this should be free.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

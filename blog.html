@@ -3,97 +3,333 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Ctrl+Care | Latest Articles</title>
+  <title>Blog — Ctrl+Care</title>
+  <meta name="description" content="The Ctrl+Care blog: AI news worth understanding, answers to questions readers send in, and plain-English takes on the tools everyone is suddenly using.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ Navigation ============================ -->
   <nav class="nav">
     <div class="container nav-container">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-circle">ctrl</div>
+        <span class="nav-logo-mark">ctrl</span>
         <span class="nav-brand">Ctrl+Care</span>
       </a>
+
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resources.html">Resources</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-follow-btn">Follow us</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+
+        <div class="nav-item">
+          <a class="nav-link" href="resources.html">
+            Resources
+            <svg class="nav-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a class="nav-drop-item" href="resources-guides.html">
+              <span class="nav-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Guides &amp; Explainers</span>
+                <span class="nav-drop-desc">Written walkthroughs of AI concepts, in plain English</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-videos.html">
+              <span class="nav-drop-icon plum">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Video Library</span>
+                <span class="nav-drop-desc">Short videos we make, explaining one idea at a time</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-courses.html">
+              <span class="nav-drop-icon teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Free Courses</span>
+                <span class="nav-drop-desc">The best no-cost courses and channels, curated</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow us</a>
       </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);">
-    <div class="container">
-      <span class="hero-tag fade-in">Blog</span>
-      <h1 class="hero-title fade-in">Latest Articles</h1>
-      <p class="hero-subtext fade-in">Stay updated with our latest posts on AI concepts, tips, news, and community stories. We share bite-sized explanations, tutorials, and insights every week.</p>
-    </div>
-  </section>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-link" href="index.html">Home</a>
+    <a class="mobile-link" href="about.html">About</a>
+    <a class="mobile-link" href="resources.html">Resources</a>
+    <a class="mobile-sub" href="resources-guides.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Guides &amp; Explainers
+    </a>
+    <a class="mobile-sub" href="resources-videos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Video Library
+    </a>
+    <a class="mobile-sub" href="resources-courses.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Free Courses
+    </a>
+    <a class="mobile-link" href="blog.html" aria-current="page">Blog</a>
+    <a class="mobile-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow @ctrlcare_project</a>
+  </div>
 
-  <!-- Categories Filter -->
-  <section class="section">
-    <div class="container">
-      <div class="blog-categories">
-        <a href="#" class="category-pill active">All Posts</a>
-        <a href="#" class="category-pill">AI Basics</a>
-        <a href="#" class="category-pill">Tips & Tricks</a>
-        <a href="#" class="category-pill">News</a>
-        <a href="#" class="category-pill">Community</a>
-        <a href="#" class="category-pill">Success Stories</a>
+  <main id="main">
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero hero-page">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span aria-current="page">Blog</span>
+        </nav>
+
+        <span class="badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          First posts coming soon
+        </span>
+
+        <h1 class="hero-title">The <span class="grad-text">Ctrl+Care</span> blog</h1>
+        <p class="hero-sub lede">
+          Our resource library covers the ideas that don't change. This is where we write
+          about what's happening right now &mdash; new tools, news worth actually
+          understanding, and answers to the questions you send us.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Blog Grid -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Articles</h2>
-        <p style="font-size: 1.125rem; max-width: 700px;">Our weekly series of bite-sized AI education</p>
+    <!-- =========================== Empty state =========================== -->
+    <section class="section section-tight section-flush-b">
+      <div class="container">
+        <div class="band text-center" data-reveal>
+          <span class="card-icon mx-auto" aria-hidden="true" style="background: var(--surface); box-shadow: var(--shadow-md);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+          </span>
+          <h2>We're writing the first ones now</h2>
+          <p class="lede mx-auto" style="max-width: 46em;">
+            Ctrl+Care is new, and rather than pad this page out with filler we've left it
+            honest: there are no posts up yet. The first batch is being written, and the
+            topics below are what's coming.
+          </p>
+          <div class="cta-actions mt-3">
+            <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">
+              Get notified on Instagram
+            </a>
+            <a class="btn btn-outline btn-lg" href="resources.html">Browse resources instead</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Newsletter Signup -->
-  <section class="section" style="background-color: var(--bg-light);">
-    <div class="container">
-      <div class="featured-card">
-        <h3>Subscribe to Our Newsletter</h3>
-        <p style="max-width: 600px; margin: 0 auto 1.5rem;">Get our latest articles, tips, and AI news delivered to your inbox. Plus, we'll send you a free beginner's guide to AI literacy when you sign up!</p>
-        <form class="blog-newsletter" style="max-width: 400px; margin: 0 auto; display: flex; gap: 0.5rem;">
-          <input type="email" class="form-input" placeholder="Enter your email address" style="flex: 1;" required>
-          <button type="submit" class="btn btn-primary">Subscribe</button>
-        </form>
+    <!-- ========================= Coming up ========================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Coming up</span>
+          <h2>What we'll be writing about</h2>
+          <p>Four things, in rough order. If one of these is what you need, say so and it jumps the queue.</p>
+        </div>
+
+        <div class="grid grid-2" data-reveal-group>
+          <article class="card">
+            <div class="card-meta">
+              <span class="pill">AI basics</span>
+              <span class="meta-text">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                First up
+              </span>
+            </div>
+            <h3>Five AI terms people keep using wrong</h3>
+            <p>
+              Model, algorithm, training, prompt, agent. What each one actually means, so the
+              headlines stop being a blur.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span class="pill pill-plum">Tips</span>
+            </div>
+            <h3>How to check whether AI is lying to you</h3>
+            <p>
+              A short, practical routine for verifying anything a chatbot tells you &mdash;
+              useful whether you're doing homework or reading the news.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span class="pill pill-teal">For parents</span>
+            </div>
+            <h3>Your kid is using AI for homework. Now what?</h3>
+            <p>
+              Not a panic piece. What's genuinely worth worrying about, what isn't, and how to
+              have a useful conversation about it.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-meta">
+              <span class="pill pill-amber">Reader questions</span>
+            </div>
+            <h3>You asked, we answered</h3>
+            <p>
+              A regular round-up of real questions people send us, answered properly. Send us
+              yours and it might be in the first one.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+    <!-- =========================== Newsletter =========================== -->
+    <section class="section section-sunk">
+      <div class="container">
+        <div class="panel" data-reveal>
+          <div class="panel-split">
+            <div>
+              <span class="eyebrow">Don't miss the first post</span>
+              <h2>Know when we publish</h2>
+              <p class="mt-2">
+                We announce every new post, guide and video on Instagram the day it goes up
+                &mdash; that's the most reliable way to catch them right now.
+              </p>
+              <p>
+                A proper email newsletter is on our list, but we haven't built it yet and we'd
+                rather not collect addresses we can't email.
+              </p>
+              <div class="hero-actions mt-3" style="margin-bottom: 0;">
+                <a class="btn btn-soft btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">
+                  Follow @ctrlcare_project
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-sm">
+              <div class="glass">
+                <span class="glass-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                  Got a question?
+                </span>
+                <p>
+                  Send it in. Reader questions are the whole reason for one of our first
+                  planned posts.
+                </p>
+                <a class="link-arrow mt-2" href="contact.html" style="color: var(--rose-300);">
+                  Ask us something
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+              <div class="glass">
+                <span class="glass-title">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                  Something to read today
+                </span>
+                <p>The free courses page is live and full of material you can start right now.</p>
+                <a class="link-arrow mt-2" href="resources-courses.html" style="color: var(--rose-300);">
+                  Free courses
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section class="cta">
+      <div class="container">
+        <h2>Want us to write about something specific?</h2>
+        <p>
+          Tell us what you're confused about. We genuinely choose topics based on what people
+          ask us.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="contact.html">
+            Suggest a topic
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="resources.html">Explore resources</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-brand">Ctrl+Care</div>
-      <p class="footer-tagline">Making AI make sense — for everyone.</p>
-      <p class="footer-copyright">© 2026 Ctrl+Care. All rights reserved.</p>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <span class="nav-logo-mark">ctrl</span>
+            <span class="footer-brand">Ctrl+Care</span>
+          </div>
+          <p class="footer-about">
+            A student-run non-profit making AI literacy free and accessible &mdash; for every
+            age, every ability, every background.
+          </p>
+          <div class="social-row">
+            <a class="social" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer" aria-label="Ctrl+Care on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a class="social" href="mailto:ctrlcareproject@gmail.com" aria-label="Email Ctrl+Care">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-list">
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="resources-guides.html">Guides &amp; explainers</a></li>
+            <li><a href="resources-videos.html">Video library</a></li>
+            <li><a href="resources-courses.html">Free courses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ctrl+Care</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:ctrlcareproject@gmail.com">Email us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ctrl+Care. All rights reserved.</span>
+        <span>Made by two high schoolers who think this should be free.</span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Newsletter form validation
-    const newsletterForm = document.querySelector('.blog-newsletter');
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = newsletterForm.querySelector('input[type="email"]');
-
-      if (email && email.value) {
-        // Simulate subscription
-        email.value = '';
-        alert('Thanks for subscribing! Check your email for our welcome message.');
-      }
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

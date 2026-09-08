@@ -3,248 +3,468 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources - Ctrl+Care | Free AI Learning Materials</title>
+  <title>Resources — Ctrl+Care</title>
+  <meta name="description" content="Free AI learning resources from Ctrl+Care: written guides and explainers, our own short video library, and a curated list of genuinely free courses.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ Navigation ============================ -->
   <nav class="nav">
     <div class="container nav-container">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-circle">ctrl</div>
+        <span class="nav-logo-mark">ctrl</span>
         <span class="nav-brand">Ctrl+Care</span>
       </a>
+
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resources.html">Resources</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com/ctrlpluscare_ai" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-follow-btn">Follow us</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+
+        <div class="nav-item">
+          <a class="nav-link" href="resources.html" aria-current="page">
+            Resources
+            <svg class="nav-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a class="nav-drop-item" href="resources-guides.html">
+              <span class="nav-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Guides &amp; Explainers</span>
+                <span class="nav-drop-desc">Written walkthroughs of AI concepts, in plain English</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-videos.html">
+              <span class="nav-drop-icon plum">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Video Library</span>
+                <span class="nav-drop-desc">Short videos we make, explaining one idea at a time</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-courses.html">
+              <span class="nav-drop-icon teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Free Courses</span>
+                <span class="nav-drop-desc">The best no-cost courses and channels, curated</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow us</a>
       </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);">
-    <div class="container">
-      <span class="hero-tag fade-in">Free Resources</span>
-      <h1 class="hero-title fade-in">Explore Resources</h1>
-      <p class="hero-subtext fade-in">Discover our collection of free, accessible AI learning materials. From introductory concepts to advanced topics, we have something for every learner.</p>
-    </div>
-  </section>
-
-  <!-- Resource Filter -->
-  <section class="section">
-    <div class="container">
-      <div class="resource-filter">
-        <button class="filter-btn active" data-filter="all">All Resources</button>
-        <button class="filter-btn" data-filter="basics">AI Basics</button>
-        <button class="filter-btn" data-filter="ethics">AI Ethics</button>
-        <button class="filter-btn" data-filter="advanced">Advanced</button>
-        <button class="filter-btn" data-filter="kids">For Kids</button>
-        <button class="filter-btn" data-filter="educators">For Educators</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Resource Grid -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Explore Our Resources</h2>
-        <p>Browse our curated collection of articles, guides, and learning materials. Click any resource to learn more.</p>
-      </div>
-
-      <!-- Basics Resources -->
-      <h3 class="mt-3" style="color: var(--dark); font-size: 1.25rem; margin-bottom: 1rem;">AI Basics</h3>
-      <div class="card-grid">
-        <div class="resource-card basics-card">
-          <h4 class="resource-title">What is AI?</h4>
-          <p class="resource-desc">A friendly introduction to artificial intelligence. Learn what AI is, how it works, and why it matters in our daily lives.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card basics-card">
-          <h4 class="resource-title">AI in Your Life</h4>
-          <p class="resource-desc">Discover the AI tools you already use without realizing it — from smart assistants to recommendation systems.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card basics-card">
-          <h4 class="resource-title">How Does AI Learn?</h4>
-          <p class="resource-desc">Understand the basics of machine learning and neural networks through simple analogies and visual explanations.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card basics-card">
-          <h4 class="resource-title">AI vs. Traditional Software</h4>
-          <p class="resource-desc">Learn what makes AI different from regular software, and when to use AI tools in your daily life.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-      </div>
-
-      <!-- Ethics Resources -->
-      <h3 class="mt-3" style="color: var(--dark); font-size: 1.25rem; margin-bottom: 1rem;">AI Ethics & Society</h3>
-      <div class="card-grid">
-        <div class="resource-card ethics-card">
-          <h4 class="resource-title">AI Bias</h4>
-          <p class="resource-desc">Why AI systems can make biased decisions and how to spot and address bias in AI applications.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card ethics-card">
-          <h4 class="resource-title">Data & Privacy</h4>
-          <p class="resource-desc">Understand what data AI systems collect, why privacy matters, and how to protect your personal information.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card ethics-card">
-          <h4 class="resource-title">AI in Art & Media</h4>
-          <p class="resource-desc">Explore how AI is used to create art, music, and content — and the ethical questions it raises.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card ethics-card">
-          <h4 class="resource-title">AI's Impact on Jobs</h4>
-          <p class="resource-desc">Navigate the conversation about AI and employment. Learn to adapt your career skills for an AI-augmented world.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-      </div>
-
-      <!-- Advanced Resources -->
-      <h3 class="mt-3" style="color: var(--dark); font-size: 1.25rem; margin-bottom: 1rem;">Advanced Topics</h3>
-      <div class="card-grid">
-        <div class="resource-card advanced-card">
-          <h4 class="resource-title">Natural Language Processing</h4>
-          <p class="resource-desc">Dive deeper into how AI understands and generates human language. From sentiment analysis to translation.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card advanced-card">
-          <h4 class="resource-title">Computer Vision</h4>
-          <p class="resource-desc">How AI "sees" and interprets visual information. From image recognition to object detection systems.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card advanced-card">
-          <h4 class="resource-title">AI Architecture</h4>
-          <p class="resource-desc">A deep dive into AI model architecture, weights, and the mathematics behind neural networks.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-      </div>
-
-      <!-- For Kids Resources -->
-      <h3 class="mt-3" style="color: var(--dark); font-size: 1.25rem; margin-bottom: 1rem;">For Kids & Teens</h3>
-      <div class="card-grid">
-        <div class="resource-card kids-card">
-          <h4 class="resource-title">AI Explained Simply</h4>
-          <p class="resource-desc">Fun, kid-friendly explanations of how AI works, perfect for children ages 8-12.</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-        <div class="resource-card kids-card">
-          <h4 class="resource-title">AI for Creativity</h4>
-          <p class="resource-desc">Discover how to use AI tools for art, music, and storytelling. Get creative with technology!</p>
-          <a href="#" class="resource-link">Read more →</a>
-        </div>
-      </div>
-
-      <!-- For Educators Resources -->
-      <h3 class="mt-3" style="color: var(--dark); font-size: 1.25rem; margin-bottom: 1rem;">For Educators</h3>
-      <div class="card-grid">
-        <div class="resource-card educators-card">
-          <h4 class="resource-title">AI Lesson Plans</h4>
-          <p class="resource-desc">Ready-to-use lesson plans, activities, and discussion guides for introducing AI concepts in your classroom.</p>
-          <a href="#" class="resource-link">Browse lesson plans →</a>
-        </div>
-        <div class="resource-card educators-card">
-          <h4 class="resource-title">Curriculum Guides</h4>
-          <p class="resource-desc">Comprehensive curriculum resources for schools looking to build AI literacy programs.</p>
-          <a href="#" class="resource-link">View curriculum →</a>
-        </div>
-        <div class="resource-card educators-card">
-          <h4 class="resource-title">Professional Development</h4>
-          <p class="resource-desc">Resources for educators to stay current with AI developments and integrate them into their teaching.</p>
-          <a href="#" class="resource-link">Professional resources →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Resource -->
-  <section class="section" style="background-color: var(--bg-light);">
-    <div class="container">
-      <div class="featured-card">
-        <h3>🎁 New Resources</h3>
-        <p style="max-width: 600px; margin: 0 auto 1.5rem;">We're constantly adding new resources to our collection. Check back soon for fresh guides, interactive demos, and exclusive content!</p>
-        <a href="blog.html" class="btn btn-primary">See recent blog posts</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Suggest a Topic</h2>
-        <p>Have a topic you'd like us to cover? Let us know — we're always looking for ways to expand our resources!</p>
-      </div>
-      <form class="card magic-card" style="padding: 2rem;">
-        <h3 style="text-align: center; margin-bottom: 1.5rem;">Send us a suggestion</h3>
-        <div class="form-group">
-          <label for="suggest-name" class="form-label">Your name</label>
-          <input type="text" id="suggest-name" name="suggest-name" class="form-input" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="suggest-email" class="form-label">Email address</label>
-          <input type="email" id="suggest-email" name="suggest-email" class="form-input" placeholder="you@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="suggest-topic" class="form-label">Topic you'd like to see</label>
-          <input type="text" id="suggest-topic" name="suggest-topic" class="form-input" placeholder="e.g., AI in healthcare, ethical AI development" required>
-        </div>
-        <div class="form-group">
-          <label for="suggest-comment" class="form-label">Additional context (optional)</label>
-          <textarea id="suggest-comment" name="suggest-comment" class="form-textarea" placeholder="Any specific angle or perspective you'd like us to cover?"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit suggestion</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- CTA Strip -->
-  <div class="cta-strip">
-    <div class="container">
-      <h3>Keep Learning!</h3>
-      <p style="margin-bottom: 1rem;">Subscribe to our newsletter for updates on new resources</p>
-      <a href="#" class="btn btn-primary">Subscribe to newsletter</a>
-    </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-link" href="index.html">Home</a>
+    <a class="mobile-link" href="about.html">About</a>
+    <a class="mobile-link" href="resources.html" aria-current="page">Resources</a>
+    <a class="mobile-sub" href="resources-guides.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Guides &amp; Explainers
+    </a>
+    <a class="mobile-sub" href="resources-videos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Video Library
+    </a>
+    <a class="mobile-sub" href="resources-courses.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Free Courses
+    </a>
+    <a class="mobile-link" href="blog.html">Blog</a>
+    <a class="mobile-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow @ctrlcare_project</a>
   </div>
 
-  <!-- Footer -->
+  <main id="main">
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero hero-page">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span aria-current="page">Resources</span>
+        </nav>
+
+        <span class="badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Everything here is free
+        </span>
+
+        <h1 class="hero-title">The <span class="grad-text">resource library</span></h1>
+        <p class="hero-sub lede">
+          Three routes to the same destination: understanding AI well enough to make your
+          own decisions about it. Read, watch, or study &mdash; whichever suits how your
+          brain works.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================= Three pathways ========================= -->
+    <section class="section section-tight">
+      <div class="container">
+        <div class="grid grid-3" data-reveal-group>
+          <a class="pathway pw-rose" href="resources-guides.html">
+            <span class="pathway-num">01 &mdash; READ</span>
+            <span class="pathway-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            </span>
+            <h3>Guides &amp; Explainers</h3>
+            <p>
+              Our own written walkthroughs. One concept per guide, ordered from absolute
+              beginner to properly technical.
+            </p>
+            <ul class="pathway-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                AI basics, ethics, and advanced topics
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Separate tracks for kids and educators
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Every guide reads in under 10 minutes
+              </li>
+            </ul>
+            <span class="pathway-foot link-arrow">
+              Browse guides
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a class="pathway pw-plum" href="resources-videos.html">
+            <span class="pathway-num">02 &mdash; WATCH</span>
+            <span class="pathway-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+            </span>
+            <h3>Video Library</h3>
+            <p>
+              Short videos we produce ourselves, using everyday examples instead of
+              equations. Built as a free alternative to paid courses.
+            </p>
+            <ul class="pathway-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                One idea per video, under 10 minutes
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                No prior knowledge assumed
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Watchable on a phone, anywhere
+              </li>
+            </ul>
+            <span class="pathway-foot link-arrow">
+              See the library
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <a class="pathway pw-teal" href="resources-courses.html">
+            <span class="pathway-num">03 &mdash; STUDY</span>
+            <span class="pathway-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+            </span>
+            <h3>Free Courses</h3>
+            <p>
+              Want to go deeper than we can take you? These are the best courses and
+              YouTube series on the internet that cost nothing.
+            </p>
+            <ul class="pathway-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Checked for hidden costs and paywalls
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                University lectures, free to audit
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                Sorted by level and time commitment
+              </li>
+            </ul>
+            <span class="pathway-foot link-arrow">
+              Find a course
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== Not sure where ========================== -->
+    <section class="section section-sunk">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Not sure where to start?</span>
+          <h2>Find yourself on this list</h2>
+          <p>Tell us who you are and we'll point you at the right shelf.</p>
+        </div>
+
+        <div class="grid grid-2" data-reveal-group>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            </span>
+            <h3>"I know nothing about AI"</h3>
+            <p>
+              Start with <strong>What is AI, really?</strong> in the guides, then watch
+              <strong>How machines learn</strong>. That's about fifteen minutes total, and it
+              covers most of what people mean when they say "AI".
+            </p>
+            <div class="card-foot">
+              <a class="link-arrow" href="resources-guides.html">
+                Start at the beginning
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-icon plum" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg>
+            </span>
+            <h3>"I'm teaching this next week"</h3>
+            <p>
+              Head to the educator track in the guides for lesson-shaped material and
+              discussion prompts, then grab a video to open the class with.
+            </p>
+            <div class="card-foot">
+              <a class="link-arrow" href="resources-guides.html#educators">
+                Educator resources
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-icon teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>"I'm worried about my data"</h3>
+            <p>
+              Go to the ethics section of the guides. <strong>Data &amp; privacy</strong> and
+              <strong>AI bias</strong> cover what these systems collect, what they get wrong,
+              and what you can actually do about it.
+            </p>
+            <div class="card-foot">
+              <a class="link-arrow" href="resources-guides.html#ethics">
+                Ethics &amp; society
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <span class="card-icon amber" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M16 12h2"/><path d="M16 8h2"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/><path d="M6 12h2"/><path d="M6 8h2"/></svg>
+            </span>
+            <h3>"I already get the basics"</h3>
+            <p>
+              Skip to the advanced guides for language models and computer vision, then move
+              on to the free university courses &mdash; some of them are genuinely excellent.
+            </p>
+            <div class="card-foot">
+              <a class="link-arrow" href="resources-courses.html">
+                Go deeper
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== Blog pointer ========================== -->
+    <section class="section">
+      <div class="container">
+        <div class="band" data-reveal>
+          <div class="panel-split">
+            <div>
+              <span class="eyebrow">Also worth your time</span>
+              <h2>Our blog</h2>
+              <p class="mt-2 lede">
+                The resource library is the evergreen stuff &mdash; the concepts that don't
+                change. The blog is where we cover what's happening right now: new tools,
+                news worth understanding, and answers to questions people send in.
+              </p>
+              <div class="hero-actions mt-3" style="margin-bottom: 0;">
+                <a class="btn btn-primary" href="blog.html">
+                  Read the blog
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="stack-sm">
+              <div class="card" style="padding: 1.25rem;">
+                <div class="card-meta" style="margin-bottom: .5rem;">
+                  <span class="pill">Evergreen</span>
+                </div>
+                <h4 style="margin-bottom: .25rem;">Resources</h4>
+                <p style="font-size: .875rem;">Concepts, explained once and kept up to date.</p>
+              </div>
+              <div class="card" style="padding: 1.25rem;">
+                <div class="card-meta" style="margin-bottom: .5rem;">
+                  <span class="pill pill-plum">Timely</span>
+                </div>
+                <h4 style="margin-bottom: .25rem;">Blog</h4>
+                <p style="font-size: .875rem;">What changed this month and why it matters.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= Suggest a topic ========================= -->
+    <section class="section section-sunk" id="suggest">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Help us grow this</span>
+          <h2>Suggest a topic</h2>
+          <p>
+            Genuinely &mdash; this is how most of our material gets chosen. If you couldn't
+            find what you came for, tell us and we'll write it.
+          </p>
+        </div>
+
+        <form class="form-card mx-auto" style="max-width: 680px;" action="https://formspree.io/f/xlgoaeap" method="POST" data-reveal>
+          <input type="hidden" name="_next" value="https://ctrlcareproject.org/resources.html?sent=true">
+          <input type="hidden" name="subject" value="Resource suggestion from the website">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="suggest-name">Your name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="suggest-name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="suggest-email">Email address <span class="req">*</span></label>
+              <input class="form-input" type="email" id="suggest-email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="suggest-topic">Topic you'd like to see <span class="req">*</span></label>
+            <input class="form-input" type="text" id="suggest-topic" name="topic" placeholder="e.g. How does AI affect hiring?" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="suggest-format">Preferred format</label>
+            <select class="form-select" id="suggest-format" name="format">
+              <option value="">No preference</option>
+              <option value="guide">A written guide</option>
+              <option value="video">A video</option>
+              <option value="course">A course recommendation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="suggest-comment">Anything else? (optional)</label>
+            <textarea class="form-textarea" id="suggest-comment" name="message" placeholder="Is there a specific angle you'd want covered?"></textarea>
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit">
+            Submit suggestion
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+          </button>
+
+          <p class="form-note">We read every suggestion. We can't promise a timeline, but we do promise a reply.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section class="cta">
+      <div class="container">
+        <h2>New material goes up regularly</h2>
+        <p>Follow us on Instagram to catch new guides, videos and course picks as they land.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">
+            Follow @ctrlcare_project
+          </a>
+          <a class="btn btn-outline btn-lg" href="contact.html">Get in touch</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-brand">Ctrl+Care</div>
-      <p class="footer-tagline">Making AI make sense — for everyone.</p>
-      <p class="footer-copyright">© 2026 Ctrl+Care. All rights reserved.</p>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <span class="nav-logo-mark">ctrl</span>
+            <span class="footer-brand">Ctrl+Care</span>
+          </div>
+          <p class="footer-about">
+            A student-run non-profit making AI literacy free and accessible &mdash; for every
+            age, every ability, every background.
+          </p>
+          <div class="social-row">
+            <a class="social" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer" aria-label="Ctrl+Care on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a class="social" href="mailto:ctrlcareproject@gmail.com" aria-label="Email Ctrl+Care">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-list">
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="resources-guides.html">Guides &amp; explainers</a></li>
+            <li><a href="resources-videos.html">Video library</a></li>
+            <li><a href="resources-courses.html">Free courses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ctrl+Care</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:ctrlcareproject@gmail.com">Email us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ctrl+Care. All rights reserved.</span>
+        <span>Made by two high schoolers who think this should be free.</span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Filter functionality
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const resourceCards = document.querySelectorAll('.resource-card');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        // Update active button
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-
-        // Filter content
-        const filter = button.getAttribute('data-filter');
-
-        resourceCards.forEach(card => {
-          if (filter === 'all' || card.classList.contains(filter)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

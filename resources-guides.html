@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guides &amp; Explainers — Ctrl+Care</title>
+  <meta name="description" content="Written AI explainers from Ctrl+Care, in plain English. AI basics, ethics and society, advanced topics, plus dedicated tracks for kids and educators.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ Navigation ============================ -->
+  <nav class="nav">
+    <div class="container nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-mark">ctrl</span>
+        <span class="nav-brand">Ctrl+Care</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+
+        <div class="nav-item">
+          <a class="nav-link" href="resources.html" aria-current="page">
+            Resources
+            <svg class="nav-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a class="nav-drop-item" href="resources-guides.html">
+              <span class="nav-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Guides &amp; Explainers</span>
+                <span class="nav-drop-desc">Written walkthroughs of AI concepts, in plain English</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-videos.html">
+              <span class="nav-drop-icon plum">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Video Library</span>
+                <span class="nav-drop-desc">Short videos we make, explaining one idea at a time</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-courses.html">
+              <span class="nav-drop-icon teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Free Courses</span>
+                <span class="nav-drop-desc">The best no-cost courses and channels, curated</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow us</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-link" href="index.html">Home</a>
+    <a class="mobile-link" href="about.html">About</a>
+    <a class="mobile-link" href="resources.html">Resources</a>
+    <a class="mobile-sub" href="resources-guides.html" aria-current="page">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Guides &amp; Explainers
+    </a>
+    <a class="mobile-sub" href="resources-videos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Video Library
+    </a>
+    <a class="mobile-sub" href="resources-courses.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Free Courses
+    </a>
+    <a class="mobile-link" href="blog.html">Blog</a>
+    <a class="mobile-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow @ctrlcare_project</a>
+  </div>
+
+  <main id="main">
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero hero-page">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <a href="resources.html">Resources</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span aria-current="page">Guides</span>
+        </nav>
+
+        <span class="badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          01 &mdash; Read
+        </span>
+
+        <h1 class="hero-title">Guides &amp; <span class="grad-text">Explainers</span></h1>
+        <p class="hero-sub lede">
+          One concept per guide, written in plain English. If we use a technical word, we
+          define it on the spot &mdash; you should never have to go and look something up
+          just to finish a sentence.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ Library ============================ -->
+    <section class="section section-tight">
+      <div class="container">
+
+        <div class="filters" data-filter-bar="#guide-library" data-filter-empty="#guide-empty" data-reveal>
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All guides</button>
+          <button class="filter-btn" type="button" data-filter="basics" aria-pressed="false">AI basics</button>
+          <button class="filter-btn" type="button" data-filter="ethics" aria-pressed="false">Ethics &amp; society</button>
+          <button class="filter-btn" type="button" data-filter="advanced" aria-pressed="false">Advanced</button>
+          <button class="filter-btn" type="button" data-filter="kids" aria-pressed="false">For kids &amp; teens</button>
+          <button class="filter-btn" type="button" data-filter="educators" aria-pressed="false">For educators</button>
+        </div>
+
+        <div id="guide-library">
+
+          <!-- ---------------------------- Basics ---------------------------- -->
+          <div data-group id="basics" style="margin-bottom: 3.5rem;">
+            <div class="section-head left" style="max-width: none; margin-bottom: 1.75rem;" data-reveal>
+              <span class="eyebrow">Start here</span>
+              <h2 style="font-size: clamp(1.375rem, 2.4vw, 1.75rem);">AI basics</h2>
+              <p>The foundation. If you read nothing else, read these four.</p>
+            </div>
+
+            <div class="grid grid-auto" data-reveal-group>
+              <article class="card" data-cat="basics">
+                <div class="card-meta">
+                  <span class="pill">Beginner</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    6 min read
+                  </span>
+                </div>
+                <h3>What is AI, really?</h3>
+                <p>
+                  A friendly introduction to artificial intelligence: what the word actually
+                  means, what these systems do, and why the term gets used for about nine
+                  different things.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="basics">
+                <div class="card-meta">
+                  <span class="pill">Beginner</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h3>AI in your life already</h3>
+                <p>
+                  You've been using AI for years without being told. Your camera, your maps,
+                  your spam filter, your feed &mdash; here's what's under each of them.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="basics">
+                <div class="card-meta">
+                  <span class="pill">Beginner</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    8 min read
+                  </span>
+                </div>
+                <h3>How does AI learn?</h3>
+                <p>
+                  Machine learning and neural networks, explained with analogies instead of
+                  equations. Yes, you can understand this without any maths.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="basics">
+                <div class="card-meta">
+                  <span class="pill">Beginner</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    6 min read
+                  </span>
+                </div>
+                <h3>AI vs. ordinary software</h3>
+                <p>
+                  What makes AI different from a normal app, why that difference matters, and
+                  how to tell which one you're actually dealing with.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ---------------------------- Ethics ---------------------------- -->
+          <div data-group id="ethics" style="margin-bottom: 3.5rem;">
+            <div class="section-head left" style="max-width: none; margin-bottom: 1.75rem;" data-reveal>
+              <span class="eyebrow">The part that affects you</span>
+              <h2 style="font-size: clamp(1.375rem, 2.4vw, 1.75rem);">Ethics &amp; society</h2>
+              <p>Where AI touches fairness, privacy, work and creativity &mdash; without the panic.</p>
+            </div>
+
+            <div class="grid grid-auto" data-reveal-group>
+              <article class="card" data-cat="ethics">
+                <div class="card-meta">
+                  <span class="pill pill-plum">Ethics</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    7 min read
+                  </span>
+                </div>
+                <h3>AI bias</h3>
+                <p>
+                  Why these systems make unfair decisions, where the bias enters, and how to
+                  spot it in a tool you're being asked to trust.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="ethics">
+                <div class="card-meta">
+                  <span class="pill pill-plum">Ethics</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    7 min read
+                  </span>
+                </div>
+                <h3>Data &amp; privacy</h3>
+                <p>
+                  What AI systems collect about you, who ends up with it, and the settings
+                  that actually make a difference versus the ones that don't.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="ethics">
+                <div class="card-meta">
+                  <span class="pill pill-plum">Ethics</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    6 min read
+                  </span>
+                </div>
+                <h3>AI in art &amp; media</h3>
+                <p>
+                  How image, music and video generators work, whose work they learned from,
+                  and the questions artists are raising about it.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="ethics">
+                <div class="card-meta">
+                  <span class="pill pill-plum">Ethics</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    8 min read
+                  </span>
+                </div>
+                <h3>AI and your job</h3>
+                <p>
+                  A calm look at automation: which tasks are genuinely at risk, which claims
+                  are overblown, and which skills are worth building now.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- --------------------------- Advanced --------------------------- -->
+          <div data-group id="advanced" style="margin-bottom: 3.5rem;">
+            <div class="section-head left" style="max-width: none; margin-bottom: 1.75rem;" data-reveal>
+              <span class="eyebrow">Go deeper</span>
+              <h2 style="font-size: clamp(1.375rem, 2.4vw, 1.75rem);">Advanced topics</h2>
+              <p>For when the basics have clicked and you want to know how it really works.</p>
+            </div>
+
+            <div class="grid grid-auto" data-reveal-group>
+              <article class="card" data-cat="advanced">
+                <div class="card-meta">
+                  <span class="pill pill-teal">Advanced</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    10 min read
+                  </span>
+                </div>
+                <h3>How language models work</h3>
+                <p>
+                  Tokens, prediction and context windows &mdash; what a chatbot is actually
+                  doing when it answers you, and why it sometimes makes things up.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="advanced">
+                <div class="card-meta">
+                  <span class="pill pill-teal">Advanced</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    9 min read
+                  </span>
+                </div>
+                <h3>Computer vision</h3>
+                <p>
+                  How software "sees": from recognising a cat to reading a road sign, and the
+                  ways this goes wrong in the real world.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="advanced">
+                <div class="card-meta">
+                  <span class="pill pill-teal">Advanced</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    12 min read
+                  </span>
+                </div>
+                <h3>Inside a neural network</h3>
+                <p>
+                  Layers, weights and training, explained step by step. The most technical
+                  thing we publish &mdash; and still readable without a maths background.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- ----------------------------- Kids ----------------------------- -->
+          <div data-group id="kids" style="margin-bottom: 3.5rem;">
+            <div class="section-head left" style="max-width: none; margin-bottom: 1.75rem;" data-reveal>
+              <span class="eyebrow">Ages 8&ndash;16</span>
+              <h2 style="font-size: clamp(1.375rem, 2.4vw, 1.75rem);">For kids &amp; teens</h2>
+              <p>Same ideas, different pace &mdash; and a lot more examples.</p>
+            </div>
+
+            <div class="grid grid-auto" data-reveal-group>
+              <article class="card" data-cat="kids">
+                <div class="card-meta">
+                  <span class="pill pill-amber">Ages 8&ndash;12</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h3>AI explained simply</h3>
+                <p>
+                  What a computer means when it "learns", told through games, guessing and
+                  a lot of examples you'll recognise.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="kids">
+                <div class="card-meta">
+                  <span class="pill pill-amber">Ages 12&ndash;16</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    6 min read
+                  </span>
+                </div>
+                <h3>Using AI for schoolwork &mdash; fairly</h3>
+                <p>
+                  Where AI genuinely helps you learn, where it quietly stops you learning,
+                  and how to tell the difference before you hand something in.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="kids">
+                <div class="card-meta">
+                  <span class="pill pill-amber">Ages 10&ndash;16</span>
+                  <span class="meta-text">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    5 min read
+                  </span>
+                </div>
+                <h3>Get creative with AI</h3>
+                <p>
+                  Art, music and storytelling with AI tools &mdash; what's fun, what's free,
+                  and how to keep your own voice in the work.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <!-- --------------------------- Educators --------------------------- -->
+          <div data-group id="educators">
+            <div class="section-head left" style="max-width: none; margin-bottom: 1.75rem;" data-reveal>
+              <span class="eyebrow">Classroom-ready</span>
+              <h2 style="font-size: clamp(1.375rem, 2.4vw, 1.75rem);">For educators</h2>
+              <p>Material you can pick up and teach with, free for any school or non-profit.</p>
+            </div>
+
+            <div class="grid grid-auto" data-reveal-group>
+              <article class="card" data-cat="educators">
+                <div class="card-meta">
+                  <span class="pill">Lesson material</span>
+                </div>
+                <h3>AI lesson plans</h3>
+                <p>
+                  Lesson-shaped introductions to AI with activities, discussion prompts and
+                  a rough timing guide for a single period.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="educators">
+                <div class="card-meta">
+                  <span class="pill">Curriculum</span>
+                </div>
+                <h3>Building an AI literacy unit</h3>
+                <p>
+                  How to sequence this across several weeks, what to cover first, and where
+                  students most often get stuck.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+
+              <article class="card" data-cat="educators">
+                <div class="card-meta">
+                  <span class="pill">Policy</span>
+                </div>
+                <h3>Talking to students about AI use</h3>
+                <p>
+                  A practical framing for classroom AI policy &mdash; one that students
+                  actually find fair, rather than one they route around.
+                </p>
+                <div class="card-foot">
+                  <span class="pill pill-neutral">Coming soon</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <p class="filter-empty" id="guide-empty" hidden>
+          No guides in that category yet &mdash; try another filter, or
+          <a href="resources.html#suggest">suggest a topic</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================== In progress =========================== -->
+    <section class="section section-sunk">
+      <div class="container">
+        <div class="band" data-reveal>
+          <div class="panel-split">
+            <div>
+              <span class="eyebrow">Straight with you</span>
+              <h2>These guides are being written now</h2>
+              <p class="mt-2 lede">
+                The library above is our publishing plan, not a bluff &mdash; each guide goes
+                live as it's finished, and we'd rather show you what's coming than pretend
+                the shelf is full.
+              </p>
+              <p>
+                Want one of them sooner? Tell us which, and it moves up the queue. That's
+                genuinely how we pick the order.
+              </p>
+              <div class="hero-actions mt-3" style="margin-bottom: 0;">
+                <a class="btn btn-primary" href="contact.html">
+                  Request a guide
+                  <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+                <a class="btn btn-outline" href="resources-courses.html">Free courses meanwhile</a>
+              </div>
+            </div>
+
+            <div class="stack-sm">
+              <div class="glass" style="background: rgba(255,255,255,.7); border-color: var(--border-strong);">
+                <span class="glass-title" style="color: var(--ink-900);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--rose-600);"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  Want it now?
+                </span>
+                <p style="color: var(--ink-600);">
+                  The free courses page is already full of excellent material you can start today.
+                </p>
+              </div>
+              <div class="glass" style="background: rgba(255,255,255,.7); border-color: var(--border-strong);">
+                <span class="glass-title" style="color: var(--ink-900);">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--rose-600);"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+                  Know when they land
+                </span>
+                <p style="color: var(--ink-600);">
+                  We post each new guide to Instagram the day it goes up.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section class="cta">
+      <div class="container">
+        <h2>Prefer to watch or study instead?</h2>
+        <p>The same ideas exist as short videos, and as full free courses if you want depth.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="resources-videos.html">Video library</a>
+          <a class="btn btn-outline btn-lg" href="resources-courses.html">Free courses</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <span class="nav-logo-mark">ctrl</span>
+            <span class="footer-brand">Ctrl+Care</span>
+          </div>
+          <p class="footer-about">
+            A student-run non-profit making AI literacy free and accessible &mdash; for every
+            age, every ability, every background.
+          </p>
+          <div class="social-row">
+            <a class="social" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer" aria-label="Ctrl+Care on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a class="social" href="mailto:ctrlcareproject@gmail.com" aria-label="Email Ctrl+Care">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-list">
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="resources-guides.html">Guides &amp; explainers</a></li>
+            <li><a href="resources-videos.html">Video library</a></li>
+            <li><a href="resources-courses.html">Free courses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ctrl+Care</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:ctrlcareproject@gmail.com">Email us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ctrl+Care. All rights reserved.</span>
+        <span>Made by two high schoolers who think this should be free.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

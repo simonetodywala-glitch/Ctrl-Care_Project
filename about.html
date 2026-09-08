@@ -3,156 +3,399 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About - Ctrl+Care | Our Story</title>
+  <title>About — Ctrl+Care</title>
+  <meta name="description" content="Ctrl+Care was started by two high school sophomores, Simone Todywala and Jhanvi Rapolou, to make AI literacy free and accessible to everyone.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============================ Navigation ============================ -->
   <nav class="nav">
     <div class="container nav-container">
       <a href="index.html" class="nav-logo">
-        <div class="nav-logo-circle">ctrl</div>
+        <span class="nav-logo-mark">ctrl</span>
         <span class="nav-brand">Ctrl+Care</span>
       </a>
+
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="resources.html">Resources</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://instagram.com/ctrlcare_project" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-follow-btn">Follow us</a>
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html" aria-current="page">About</a>
+
+        <div class="nav-item">
+          <a class="nav-link" href="resources.html">
+            Resources
+            <svg class="nav-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a class="nav-drop-item" href="resources-guides.html">
+              <span class="nav-drop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Guides &amp; Explainers</span>
+                <span class="nav-drop-desc">Written walkthroughs of AI concepts, in plain English</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-videos.html">
+              <span class="nav-drop-icon plum">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Video Library</span>
+                <span class="nav-drop-desc">Short videos we make, explaining one idea at a time</span>
+              </span>
+            </a>
+            <a class="nav-drop-item" href="resources-courses.html">
+              <span class="nav-drop-icon teal">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+              </span>
+              <span>
+                <span class="nav-drop-title">Free Courses</span>
+                <span class="nav-drop-desc">The best no-cost courses and channels, curated</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <a class="nav-link" href="blog.html">Blog</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary btn-sm nav-cta" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow us</a>
       </div>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" style="background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);">
-    <div class="container">
-      <span class="hero-tag fade-in">Our Story</span>
-      <h1 class="hero-title fade-in">About Ctrl+Care</h1>
-      <p class="hero-subtext fade-in">The story of two friends, a passion for helping others, and a mission to make artificial intelligence understandable for everyone.</p>
-    </div>
-  </section>
-
-  <!-- Our Story Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Story</h2>
-        <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto;">It started as a simple idea between two high school sophomores: Simone Todywala and Jhanvi Rapolou. They noticed something important — while artificial intelligence was changing everything, information about it felt meant only for a select few.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card magic-card" style="grid-column: span 2;">
-          <div class="card-icon" style="margin-bottom: 1.5rem;">👫</div>
-          <h3 class="card-title">High Schoolers on a Mission</h3>
-          <p style="margin-bottom: 1rem;">Simone, a sophomore, felt it's important that more people are aware of the future of AI. Jhanvi, another sophomore, felt that it shouldn't matter whether you have a degree or some professional background as a computer scientist.</p>
-          <p style="margin-bottom: 1rem;">Together, they decided to create Ctrl+Care — a resource that's warm, friendly, and truly accessible. No jargon without explanation. No assumptions about prior knowledge. Just clear, caring instruction that met people where they were.</p>
-          <p>We're high school students looking to make a difference in our community, and we believe AI literacy should be for everyone.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Section -->
-  <section class="section" style="background-color: var(--bg-light);">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Mission</h2>
-      </div>
-      <div class="featured-card" style="background: linear-gradient(135deg, var(--primary) 0%, #f5e0e0 100%);">
-        <h2 style="margin-bottom: 1rem;">Making AI make sense — for everyone.</h2>
-        <p style="font-size: 1.125rem; max-width: 700px; margin: 0 auto; line-height: 1.8;">We're two high school sophomores who believe that artificial intelligence shouldn't be the domain of a tech elite. We believe that every person — no matter their age, education, or background — deserves to understand the tools that are shaping their world. Ctrl+Care is our promise to make that a reality, one friendly explanation at a time.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Meet the Team Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2>Meet the Founders</h2>
-        <p>Two high school sophomores making AI literacy accessible to all.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card magic-card">
-          <div class="card-icon" style="margin-bottom: 1.5rem;">✨</div>
-          <h3 class="card-title">Simone Todywala</h3>
-          <p class="card-text">Co-founder & AI Advocate</p>
-          <p class="card-text">Simone believes it's important that more people are aware of the future of AI. She's passionate about helping people understand how this technology will impact their lives and why everyone should care.</p>
-        </div>
-        <div class="card magic-card">
-          <div class="card-icon" style="margin-bottom: 1.5rem;">🚀</div>
-          <h3 class="card-title">Jhanvi Rapolou</h3>
-          <p class="card-text">Co-founder & Accessibility Advocate</p>
-          <p class="card-text">Jhanvi believes that AI literacy shouldn't require a computer science degree. She's committed to showing that you can understand AI regardless of your background or education level.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Values Section -->
-  <section class="section" style="background-color: var(--bg-light);">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Values</h2>
-        <p>These principles guide everything we do at Ctrl+Care.</p>
-      </div>
-      <div class="card-grid">
-        <div class="card magic-card" style="background-color: var(--white);">
-          <div class="card-icon">📖</div>
-          <h3 class="card-title">Learn</h3>
-          <p>We believe in learning that works for you, at your pace, on your terms. Complex ideas can be made clear when we take the time to explain them right.</p>
-        </div>
-        <div class="card magic-card" style="background-color: var(--white);">
-          <div class="card-icon">💝</div>
-          <h3 class="card-title">Care</h3>
-          <p>We approach every interaction with warmth and patience. You don't need to be perfect to learn about AI — you just need to be willing to explore with us.</p>
-        </div>
-        <div class="card magic-card" style="background-color: var(--white);">
-          <div class="card-icon">🌈</div>
-          <h3 class="card-title">Include</h3>
-          <p>AI literacy should be for everyone. We're committed to reaching learners of all ages, abilities, and backgrounds, and ensuring no one is left behind.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Divider -->
-  <div class="divider"></div>
-
-  <!-- CTA Strip -->
-  <div class="cta-strip">
-    <div class="container">
-      <h3>Want to help us reach more learners?</h3>
-      <p style="margin-bottom: 1rem;">Share our resources, spread the word, or explore how you can collaborate with Ctrl+Care</p>
-      <a href="contact.html" class="btn btn-primary">Get in touch</a>
-    </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a class="mobile-link" href="index.html">Home</a>
+    <a class="mobile-link" href="about.html" aria-current="page">About</a>
+    <a class="mobile-link" href="resources.html">Resources</a>
+    <a class="mobile-sub" href="resources-guides.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Guides &amp; Explainers
+    </a>
+    <a class="mobile-sub" href="resources-videos.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Video Library
+    </a>
+    <a class="mobile-sub" href="resources-courses.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg> Free Courses
+    </a>
+    <a class="mobile-link" href="blog.html">Blog</a>
+    <a class="mobile-link" href="contact.html">Contact</a>
+    <a class="btn btn-primary btn-lg" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Follow @ctrlcare_project</a>
   </div>
 
-  <!-- Footer -->
+  <main id="main">
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero hero-page">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+          <span aria-current="page">About</span>
+        </nav>
+
+        <span class="badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          Our story
+        </span>
+
+        <h1 class="hero-title">Two students, one <span class="grad-text">stubborn idea</span></h1>
+        <p class="hero-sub lede">
+          That understanding AI shouldn't depend on having the right degree, the right job,
+          or the money for a course.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================= Story ============================= -->
+    <section class="section section-tight">
+      <div class="container">
+        <div class="panel-split" data-reveal>
+          <div>
+            <span class="eyebrow">How it started</span>
+            <h2>It started as a conversation between friends</h2>
+            <p class="mt-2 lede">
+              Ctrl+Care began with two high school sophomores &mdash; Simone Todywala and
+              Jhanvi Rapolou &mdash; noticing the same thing from different angles.
+            </p>
+            <p>
+              Simone kept thinking about how much AI was going to shape everyone's future, and
+              how few people around her felt equipped to have an opinion about it. Jhanvi kept
+              running into the assumption that you needed a computer science background before
+              you were allowed to understand any of it.
+            </p>
+            <p>
+              Neither of those felt right. So they built the thing they wished already
+              existed: an explanation that's warm, patient and free. No jargon left
+              undefined. No assumption that you've seen this before. Just clear teaching that
+              meets people where they actually are.
+            </p>
+            <p>
+              We're still high schoolers doing this between classes. That means we move
+              slower than a company would &mdash; and it also means nobody is paying us to
+              tell you something convenient.
+            </p>
+          </div>
+
+          <div class="stack">
+            <div class="quote">
+              <p class="quote-text">
+                It shouldn't matter whether you have a degree or a professional background in
+                computer science. You still deserve to understand the tools that are shaping
+                your life.
+              </p>
+              <cite class="quote-cite">&mdash; Jhanvi Rapolou, co-founder</cite>
+            </div>
+            <div class="quote">
+              <p class="quote-text">
+                More people need to be aware of where AI is going. Not scared of it, not sold
+                on it &mdash; just genuinely informed.
+              </p>
+              <cite class="quote-cite">&mdash; Simone Todywala, co-founder</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Mission ============================ -->
+    <section class="section">
+      <div class="container">
+        <div class="panel text-center" data-reveal>
+          <span class="eyebrow" style="justify-content: center;">Our mission</span>
+          <h2 style="max-width: 20em; margin: 0 auto 1.25rem;">
+            Making AI make sense &mdash; for everyone.
+          </h2>
+          <p class="mx-auto" style="max-width: 46em; font-size: 1.0625rem;">
+            We believe artificial intelligence shouldn't be the private language of a tech
+            elite. Every person &mdash; whatever their age, education or background &mdash;
+            deserves to understand the systems now making decisions about their work, their
+            money and their information. Ctrl+Care is our attempt to make that true, one
+            plain-English explanation at a time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Founders ============================ -->
+    <section class="section section-sunk">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Who's behind this</span>
+          <h2>Meet the founders</h2>
+          <p>Two high school sophomores, doing this because they think it matters.</p>
+        </div>
+
+        <div class="grid grid-2" data-reveal-group>
+          <div class="person">
+            <div class="person-head">
+              <span class="avatar" aria-hidden="true">ST</span>
+              <div>
+                <h3 class="person-name">Simone Todywala</h3>
+                <span class="person-role">Co-founder &amp; AI advocate</span>
+              </div>
+            </div>
+            <p>
+              Simone believes far more people need to be aware of where AI is heading. She's
+              focused on helping people understand how this technology will touch their lives
+              &mdash; and why it's worth paying attention now rather than later.
+            </p>
+          </div>
+
+          <div class="person">
+            <div class="person-head">
+              <span class="avatar plum" aria-hidden="true">JR</span>
+              <div>
+                <h3 class="person-name">Jhanvi Rapolou</h3>
+                <span class="person-role">Co-founder &amp; accessibility advocate</span>
+              </div>
+            </div>
+            <p>
+              Jhanvi believes AI literacy shouldn't require a computer science degree. She's
+              committed to proving you can genuinely understand this material regardless of
+              your background or how far you got in school.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= Values ============================= -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">What we stand for</span>
+          <h2>Three things we won't compromise on</h2>
+          <p>These sit behind every decision about what we publish and how.</p>
+        </div>
+
+        <div class="grid grid-3" data-reveal-group>
+          <div class="card">
+            <span class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+            </span>
+            <h3>Learn</h3>
+            <p>
+              Learning happens on your terms and at your pace. Complicated ideas become clear
+              when somebody takes the time to explain them properly &mdash; so we take the
+              time.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-icon plum" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </span>
+            <h3>Care</h3>
+            <p>
+              We write with warmth and patience. You don't need to already be clever about
+              this to be welcome here &mdash; you just need to be curious enough to start.
+            </p>
+          </div>
+
+          <div class="card">
+            <span class="card-icon teal" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </span>
+            <h3>Include</h3>
+            <p>
+              AI literacy has to reach everyone or it isn't literacy. We build for every age
+              and ability, and we treat accessibility as a requirement rather than a
+              nice-to-have.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ Promises ============================ -->
+    <section class="section section-sunk">
+      <div class="container">
+        <div class="panel-split" data-reveal>
+          <div>
+            <span class="eyebrow">Our commitments</span>
+            <h2>What being a non-profit actually means here</h2>
+            <p class="mt-2 lede">
+              Plenty of sites say they're free. Here's what we're specifically promising you.
+            </p>
+          </div>
+
+          <ul class="timeline">
+            <li>
+              <h4>Everything stays free</h4>
+              <p>
+                No paid tier is coming later. If we ever can't afford to run this, we'll say
+                so rather than quietly put up a paywall.
+              </p>
+            </li>
+            <li>
+              <h4>No ads, no selling your data</h4>
+              <p>
+                We don't run advertising and we don't sell information about who visits. The
+                only thing we ask for is an email address if you write to us.
+              </p>
+            </li>
+            <li>
+              <h4>No sponsored recommendations</h4>
+              <p>
+                When we recommend a course, it's because we think it's good. We earn nothing
+                from any link on this site.
+              </p>
+            </li>
+            <li>
+              <h4>We'll tell you what we don't know</h4>
+              <p>
+                This field moves fast and we're students, not researchers. Where something is
+                uncertain or contested, we say so instead of picking the confident answer.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CTA ============================== -->
+    <section class="cta">
+      <div class="container">
+        <h2>Want to help us reach more people?</h2>
+        <p>
+          Share the resources, bring them into a classroom, or get in touch about working
+          together. All of it helps.
+        </p>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="contact.html">
+            Get in touch
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-outline btn-lg" href="resources.html">Explore resources</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================== Footer ============================== -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-brand">Ctrl+Care</div>
-      <p class="footer-tagline">Making AI make sense — for everyone.</p>
-      <p class="footer-copyright">© 2026 Ctrl+Care. All rights reserved.</p>
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-row">
+            <span class="nav-logo-mark">ctrl</span>
+            <span class="footer-brand">Ctrl+Care</span>
+          </div>
+          <p class="footer-about">
+            A student-run non-profit making AI literacy free and accessible &mdash; for every
+            age, every ability, every background.
+          </p>
+          <div class="social-row">
+            <a class="social" href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer" aria-label="Ctrl+Care on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.5" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a class="social" href="mailto:ctrlcareproject@gmail.com" aria-label="Email Ctrl+Care">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-list">
+            <li><a href="resources.html">All resources</a></li>
+            <li><a href="resources-guides.html">Guides &amp; explainers</a></li>
+            <li><a href="resources-videos.html">Video library</a></li>
+            <li><a href="resources-courses.html">Free courses</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Ctrl+Care</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <ul class="footer-list">
+            <li><a href="https://www.instagram.com/ctrlcare_project/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="mailto:ctrlcareproject@gmail.com">Email us</a></li>
+            <li><a href="contact.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Ctrl+Care. All rights reserved.</span>
+        <span>Made by two high schoolers who think this should be free.</span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // FAQ toggle
-    const faqButtons = document.querySelectorAll('.faq-question');
-    faqButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const item = button.parentElement;
-        const isExpanded = item.getAttribute('aria-expanded') === 'true';
-        faqButtons.forEach(btn => {
-          btn.parentElement.setAttribute('aria-expanded', 'false');
-        });
-        if (!isExpanded) {
-          item.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>

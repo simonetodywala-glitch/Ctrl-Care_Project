@@ -217,6 +217,94 @@
       </div>
     </section>
 
+    <!-- ========================== Interest form ========================== -->
+    <section class="section" id="get-involved">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Get involved</span>
+          <h2>Work with us</h2>
+          <p>
+            Want a Ctrl+Care presentation at your school, or want to help us make
+            them? Tell us what you're interested in and we'll take it from there.
+          </p>
+        </div>
+
+        <form class="form-card mx-auto" style="max-width: 720px;" action="https://formspree.io/f/xlgoaeap" method="POST" data-reveal>
+          <!-- Shown by the inline script below after a successful Formspree redirect -->
+          <div class="alert" id="interest-sent-alert" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+            <span>Thanks! We've got your details and will be in touch soon.</span>
+          </div>
+
+          <input type="hidden" name="_next" value="https://ctrlcareproject.org/contact.html?interest=sent">
+          <input type="hidden" name="form_name" value="interest-form">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="interest-name">Your name <span class="req">*</span></label>
+              <input class="form-input" type="text" id="interest-name" name="name" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="interest-email">Email address <span class="req">*</span></label>
+              <input class="form-input" type="email" id="interest-email" name="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="interest-org">School or organization</label>
+            <input class="form-input" type="text" id="interest-org" name="organization" placeholder="e.g. Doral Academy Prep">
+          </div>
+
+          <div class="form-group">
+            <span class="form-label">I'm interested in <span class="req">*</span></span>
+            <div class="form-check">
+              <input type="checkbox" id="interest-presentation" name="interest" value="presentation" required>
+              <label for="interest-presentation">Requesting a presentation</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="interest-volunteer" name="interest" value="volunteer">
+              <label for="interest-volunteer">Volunteering with Ctrl+Care</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="interest-partner" name="interest" value="partner">
+              <label for="interest-partner">Partnering with us</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="interest-other" name="interest" value="other">
+              <label for="interest-other">Something else</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="interest-details">Tell us more</label>
+            <textarea class="form-textarea" id="interest-details" name="details" rows="5" placeholder="Audience size, age group, timing, or anything else that helps us plan."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="interest-source">How did you hear about us?</label>
+            <select class="form-select" id="interest-source" name="source">
+              <option value="">Choose one&hellip;</option>
+              <option value="instagram">Instagram</option>
+              <option value="google">Google</option>
+              <option value="school">School</option>
+              <option value="word-of-mouth">Word of mouth</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary btn-lg btn-block" type="submit">
+            Send
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+          </button>
+
+          <p class="form-note">
+            We only use your email to reply to you. We don't add you to anything, and we
+            don't pass it on.
+          </p>
+        </form>
+      </div>
+    </section>
+
     <!-- =============================== FAQ =============================== -->
     <section class="section section-sunk" id="faq">
       <div class="container">
@@ -459,6 +547,14 @@
       if (alertBox) {
         alertBox.removeAttribute('hidden');
         alertBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+    // The interest form redirects back here with ?interest=sent.
+    if (new URLSearchParams(window.location.search).get('interest') === 'sent') {
+      var interestAlert = document.getElementById('interest-sent-alert');
+      if (interestAlert) {
+        interestAlert.removeAttribute('hidden');
+        interestAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
   </script>
